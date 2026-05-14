@@ -1,0 +1,19 @@
+agent_id,agent_name,department_id,seniority,speed_factor,assignment_weight,is_overloaded_group
+agt_001,anna petrova,dep_01,senior,1.04,1.4,yes
+agt_002,mikhail orlov,dep_01,middle,0.92,1.05,no
+agt_003,ksenia smirnova,dep_01,junior,1.15,0.85,no
+agt_004,pavel morozov,dep_01,middle,0.96,1.15,no
+agt_005,elena fedorova,dep_02,middle,1.08,1.35,yes
+agt_006,kirill egorov,dep_02,senior,0.9,0.95,no
+agt_007,natalia kuzmina,dep_02,junior,1.18,0.8,no
+agt_008,artem pavlov,dep_03,senior,0.94,1.1,no
+agt_009,maria zaitseva,dep_03,middle,1.1,1.3,yes
+agt_010,sergey vinogradov,dep_03,junior,1.2,0.75,no
+agt_011,dmitry antonov,dep_04,senior,0.95,1.05,no
+agt_012,olga romanova,dep_04,middle,1.12,1.25,yes
+agt_013,viktor lebedev,dep_04,junior,1.22,0.75,no
+agt_014,irina volkova,dep_05,middle,1.06,1.45,yes
+agt_015,nikolay belyaev,dep_05,senior,0.89,1.05,no
+agt_016,yana medvedeva,dep_05,junior,1.18,0.85,no
+agt_017,egor karpov,dep_01,middle,1.0,1.2,no
+agt_018,vera gromova,dep_03,senior,0.93,1.0,no

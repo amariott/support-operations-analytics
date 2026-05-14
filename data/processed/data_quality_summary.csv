@@ -1,0 +1,12 @@
+table_name,check_name,issue_count,result
+tickets,duplicate ticket_id,0,pass
+tickets,missing required values,0,pass
+tickets,invalid dates,0,pass
+tickets,negative durations,0,pass
+ticket_events,duplicate event_id,0,pass
+ticket_events,missing required values,0,pass
+ticket_events,invalid event dates,0,pass
+agents,duplicate agent_id,0,pass
+departments,duplicate department_id,0,pass
+customer_segments,duplicate customer_segment_id,0,pass
+calendar,duplicate date,0,pass
