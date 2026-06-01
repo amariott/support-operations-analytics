@@ -7,9 +7,24 @@
 - синтетические данные службы поддержки в `data/raw`;
 - проверка и очистка данных в `data/processed`;
 - готовые bi-витрины в `data/marts`;
-- sql-аналитика для sla, backlog, нагрузки и качества данных;
+- sql-аналитика для sla, backlog, нагрузки, причин просрочек и качества данных;
 - два ноутбука для eda и прогноза спроса;
-- документация для метрик, пайплайна и сборки дашборда.
+- документация для метрик, пайплайна и сборки дашборда в power bi или datalens.
+
+## Под какие требования подходит
+
+Проект закрывает аналитику поддержки: sla, backlog, нагрузку команды и прогноз обращений.
+
+В проекте есть:
+
+- python-пайплайн для генерации, очистки, витрин и прогноза;
+- sql-скрипты для операционных метрик поддержки;
+- расчет ticket volume, sla breach rate, resolution time, backlog и workload by agent;
+- анализ sla-просрочек по категориям, приоритетам, каналам и временным периодам;
+- bi-ready витрины и инструкция для сборки дашборда в power bi или datalens;
+- прогноз количества обращений на календарных признаках, lag features и rolling mean.
+
+Стек проекта: python, pandas, scikit-learn, sql, power bi / datalens, excel / power query, git.
 
 ## Как запустить
 
@@ -37,7 +52,10 @@ python3 -m pip install -r requirements.txt
 - `data/marts/mart_workload.csv` - нагрузка и качество работы агентов;
 - `data/marts/mart_ticket_volume.csv` - объем обращений по ключевым разрезам;
 - `data/marts/mart_forecast.csv` - факт и прогноз объема тикетов;
-- `reports/forecast_report.md` - краткая бизнес-интерпретация прогноза.
+- `reports/forecast_report.md` - краткая бизнес-интерпретация прогноза;
+- `sql/sla_root_cause_analysis.sql` - анализ причин sla-просрочек;
+- `dashboard/power_bi_datalens_guide.md` - инструкция сборки bi-дашборда;
+- `docs/portfolio_case.md` - готовое описание проекта для портфолио.
 
 ## Проверка результата
 
@@ -48,4 +66,3 @@ python3 -m pip install -r requirements.txt
 - отчет прогноза содержит mae и mape;
 - sql-скрипты соответствуют вашей целевой базе;
 - структура дашборда в `dashboard/dashboard_spec.md` покрывает нужные страницы.
-

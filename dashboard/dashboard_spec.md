@@ -1,5 +1,7 @@
 # Спецификация дашборда
 
+Дашборд рассчитан на сборку в power bi или datalens. источники данных лежат в `data/marts`, а подготовка через excel / power query описана в `dashboard/power_bi_datalens_guide.md`.
+
 ## Страница 1: обзор поддержки
 
 Основной экран для руководителя поддержки. показывает дневной объем обращений, текущий backlog, долю нарушений sla, среднее время первого ответа и среднюю оценку удовлетворенности.
@@ -19,7 +21,7 @@
 Рекомендуемые визуализации:
 
 - heatmap `department_name` x `priority` по sla breach rate;
-- bar chart категорий с максимальной долей нарушений;
+- bar chart категорий, каналов и периодов с максимальной долей нарушений;
 - scatter plot `resolution_hours` x `satisfaction_score`;
 - таблица топ проблемных комбинаций отдел-категория-приоритет.
 
@@ -32,6 +34,7 @@
 - bar chart assigned tickets по агентам;
 - bar chart open backlog по агентам;
 - table с agent name, seniority, assigned tickets, sla breach rate, avg satisfaction score;
+- таблица bottlenecks: агент, отдел, нагрузка, backlog, sla breach rate, resolution time;
 - фильтр `is_overloaded_group`.
 
 ## Страница 4: прогноз спроса
@@ -44,4 +47,3 @@
 - line chart moving average forecast;
 - карточки mae и mape из отчета;
 - таблица будущих дат с прогнозом.
-

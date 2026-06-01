@@ -31,3 +31,16 @@
 
 `src/forecast_ticket_volume.py` строит признаки для дневного объема, обучает baseline-регрессию, сравнивает ее со скользящим средним и сохраняет прогноз в `mart_forecast.csv`.
 
+## Sql-слой
+
+Папка `sql` содержит запросы для расчета sla, backlog, workload by agent, ticket volume, качества данных, причин sla-просрочек и поиска bottlenecks.
+
+Ключевые запросы:
+
+- `sla_metrics.sql`;
+- `backlog_analysis.sql`;
+- `workload_by_agent.sql`;
+- `ticket_volume_forecast_dataset.sql`;
+- `sla_root_cause_analysis.sql`;
+- `bottleneck_detection.sql`;
+- `data_quality_checks.sql`.

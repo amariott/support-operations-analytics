@@ -11,6 +11,7 @@
 - avg resolution hours: среднее время решения или текущий возраст открытого обращения;
 - avg satisfaction score: средняя оценка клиента по закрытым обращениям;
 - forecast tickets: прогноз дневного объема обращений.
+- bottleneck score: сумма флагов высокой нагрузки, высокого sla breach rate и длинного resolution time.
 
 ## Фильтры
 
@@ -23,6 +24,7 @@
 - channel;
 - is_overloaded_group;
 - dataset_split.
+- day_of_week.
 
 ## Источники
 
@@ -31,4 +33,5 @@
 - `mart_workload.csv` для нагрузки агентов;
 - `mart_ticket_volume.csv` для объема обращений;
 - `mart_forecast.csv` для прогноза.
-
+- `sla_root_cause_analysis.sql` для анализа причин просрочек по категориям, приоритетам, каналам и периодам;
+- `bottleneck_detection.sql` для поиска узких мест на уровне агентов и отделов.
