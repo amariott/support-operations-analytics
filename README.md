@@ -1,6 +1,6 @@
 # Support operations analytics
 
-Портфельный проект по операционной аналитике службы поддержки. проект показывает полный цикл работы data / bi analyst: от генерации и проверки данных до sql-аналитики, bi-ready витрин, описания дашборда и baseline-прогноза количества обращений.
+Проект по операционной аналитике службы поддержки. проект показывает полный цикл работы data / bi analyst: от генерации и проверки данных до sql-аналитики, bi-ready витрин, описания дашборда и baseline-прогноза количества обращений.
 
 ## Цель проекта
 
@@ -59,50 +59,6 @@
 
 Описание метрик находится в `docs/metrics_dictionary.md`.
 
-## Структура проекта
-
-```text
-support-operations-analytics/
-  README.md
-  requirements.txt
-  data/
-    raw/
-    processed/
-    marts/
-  src/
-    generate_data.py
-    clean_data.py
-    build_marts.py
-    forecast_ticket_volume.py
-    utils.py
-  sql/
-    create_tables.sql
-    sla_metrics.sql
-    backlog_analysis.sql
-    workload_by_agent.sql
-    sla_root_cause_analysis.sql
-    bottleneck_detection.sql
-    ticket_volume_forecast_dataset.sql
-    data_quality_checks.sql
-  notebooks/
-    01_eda.ipynb
-    02_demand_forecast.ipynb
-  dashboard/
-    dashboard_spec.md
-    dashboard_metrics.md
-    power_bi_datalens_guide.md
-    screenshots_placeholder.md
-  docs/
-    data_pipeline.md
-    metrics_dictionary.md
-    dashboard_user_guide.md
-    data_quality_checks.md
-    portfolio_case.md
-  reports/
-    forecast_report.md
-    project_summary.md
-```
-
 ## Пайплайн
 
 Пайплайн состоит из четырех шагов:
@@ -134,16 +90,6 @@ python3 src/forecast_ticket_volume.py
 ```bash
 python3 -m pip install -r requirements.txt
 ```
-
-После запуска проверьте:
-
-- `data/processed/data_quality_summary.csv`;
-- `data/marts/mart_sla.csv`;
-- `data/marts/mart_backlog.csv`;
-- `data/marts/mart_workload.csv`;
-- `data/marts/mart_ticket_volume.csv`;
-- `data/marts/mart_forecast.csv`;
-- `reports/forecast_report.md`.
 
 ## Sql-аналитика
 
